@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Cute Malkin! 👑🎀 19th Birthday Gala & Magical Memories</title>
+  <meta name="description"
+    content="A magical, interactive 19th birthday surprise and photo studio with sweet memories, real photo gallery, cinematic story reel, cake cutting ceremony, and romantic music jukebox!">
+
+  <!-- Google Fonts for aesthetic typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Outfit:wght@400;500;600;700;800&family=Sacramento&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Hidden Background Music Audio Player -->
+  <audio id="bg-music-player" loop preload="auto"></audio>
+
+  <!-- Floating Ambient Particles Background -->
+  <div id="particle-container" class="particle-container" aria-hidden="true"></div>
+  <canvas id="ambient-canvas" class="ambient-canvas"></canvas>
+
+  <!-- Interactive Music & Action Float Controls -->
+  <aside class="floating-controls" aria-label="Controls">
+    <div class="music-controller-pill">
+      <button id="music-toggle-btn" class="ctrl-btn music-btn" title="Toggle Magical BGM" aria-label="Toggle Music">
+        <span class="music-icon" id="music-disc-icon">💿</span>
+        <span class="music-label" id="music-track-title">Pal Pal Har Pal</span>
+        <div class="sound-waves" id="sound-waves">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </button>
+      <button id="music-prev-btn" class="ctrl-btn mini-btn" title="Previous Song" aria-label="Previous Song">⏮️</button>
+      <button id="music-next-btn" class="ctrl-btn mini-btn" title="Next Song" aria-label="Next Song">⏭️</button>
+      <button id="music-playlist-btn" class="ctrl-btn playlist-btn" title="Select from 10 Songs" aria-label="Playlist">
+        <span>🎶</span> 10 Songs
+      </button>
+    </div>
+
+    <button id="confetti-burst-btn" class="ctrl-btn confetti-btn" title="Shower with Confetti!"
+      aria-label="Confetti Shower">
+      <span>🎉</span> Sparkle!
+    </button>
+
+    <button id="customize-name-btn" class="ctrl-btn name-btn" title="Personalize Name" aria-label="Personalize Name">
+      <span>✏️</span> <span id="btn-name-display">Cute Malkin</span>
+    </button>
+  </aside>
+
+  <!-- Centered Top Header (Logo & Subtitle in the Middle) -->
+  <header class="site-header">
+    <div class="header-container header-centered">
+      <div class="logo-area centered-logo">
+        <span class="logo-emoji">👑</span>
+        <div class="logo-text">
+          <span class="logo-title">Happy Birthday, <span class="birthday-girl-name">Cute Malkin</span>! 💖</span>
+          <span class="logo-subtitle">Celebrating Malkin's 19th Birthday Gala & Magical Memories ✨</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="journey-main-container">
+
+    <!-- STEP 1: HERO / WELCOME SECTION -->
+    <div class="journey-step active" id="step-1" data-title="Welcome & Birthday Reveal 🎀" data-badge="Step 1 of 7">
+      <section class="hero-section" id="hero">
+        <div class="hero-decorations">
+          <div class="floating-badge badge-left">👑 100% Cute Malkin Royalty</div>
+          <div class="floating-badge badge-right">✨ Official 19th Birthday</div>
+        </div>
+
+        <div class="hero-content">
+          <div class="sparkle-tag">
+            <span class="star-icon">✨</span> A Very Special 19th Birthday Celebration for Someone Incomparable <span
+              class="star-icon">✨</span>
+          </div>
+
+          <h1 class="hero-title">
+            Happy 19th Birthday To My Favorite <br>
+            <span class="gradient-text script-font birthday-girl-name">Cute Malkin</span>! 👑
+          </h1>
+
+          <p class="hero-subtitle">
+            Today is all about celebrating your 19th birthday, your sweetest smiles, endless laughter, and the most
+            precious heart in the whole wide world. We have created a magical surprise journey filled with your real photo & video
+            memories just for you! 🎀✨
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary pulse-btn btn-lg next-step-trigger" data-next="2" id="hero-celebrate-btn">
+              <span>🎉</span> Let's Celebrate ✨
+            </button>
+          </div>
+
+          <div class="hero-preview-gifs">
+            <div class="mini-gif-card">
+              <img src="assets/gif/Hello Kitty Pink GIF.gif" alt="Hello Kitty Pink" class="mini-gif" loading="lazy">
+              <span>Always Sweet 🌸</span>
+            </div>
+            <div class="mini-gif-card featured-gif">
+              <img src="assets/gif/Illustration Love GIF by iTalents.gif" alt="Illustration Love" class="mini-gif"
+                loading="lazy">
+              <span>Pure Joy 💖</span>
+            </div>
+            <div class="mini-gif-card">
+              <img src="assets/gif/Heart Love GIF by LINE FRIENDS.gif" alt="Heart Love" class="mini-gif" loading="lazy">
+              <span>All My Love 💌</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- STEP 2: THE CAKE CUTTING CEREMONY -->
+    <div class="journey-step" id="step-2" data-title="Make a Wish & Cut Cake 🎂" data-badge="Step 2 of 7">
+      <section class="cake-section" id="cake-section">
+        <div class="section-header">
+          <span class="section-tag">🎂 The Cake Ceremony</span>
+          <h2 class="section-title">Make a Secret Wish & Blow the Candles</h2>
+          <p class="section-desc">Tap each candle or click the blow button to celebrate with fireworks and music!</p>
+        </div>
+
+        <div class="cake-stage-container">
+          <!-- The Interactive Cute Cake -->
+          <div class="cake-interactive-wrapper" id="cake-wrapper">
+            <div class="cake-plate">
+              <div class="cake-shadow"></div>
+              <!-- Cake Body -->
+              <div class="cake-body" id="cake-body">
+                <!-- Bottom Tier -->
+                <div class="cake-tier cake-tier-bottom">
+                  <!-- Scalloped Cream Drips on Top of Bottom Tier -->
+                  <div class="scallop-frosting-strip">
+                    <span class="drip drip-1"></span>
+                    <span class="drip drip-2"></span>
+                    <span class="drip drip-3"></span>
+                    <span class="drip drip-4"></span>
+                    <span class="drip drip-5"></span>
+                  </div>
+                  <!-- Middle Biscuit/Cream Layer -->
+                  <div class="sponge-cream-layer"></div>
+                  <!-- Sprinkles -->
+                  <div class="cake-sprinkles bottom-sprinkles">
+                    <span class="sprinkle sp-1"></span>
+                    <span class="sprinkle sp-2"></span>
+                    <span class="sprinkle sp-3"></span>
+                    <span class="sprinkle sp-4"></span>
+                    <span class="sprinkle sp-5"></span>
+                  </div>
+                  <!-- Strawberries -->
+                  <div class="strawberry strawberry-1" title="Sweet Strawberry">🍓</div>
+                  <div class="strawberry strawberry-2" title="Sweet Strawberry">🍓</div>
+                  <div class="strawberry strawberry-3" title="Sweet Strawberry">🍓</div>
+                  <!-- Pearls along the base -->
+                  <div class="cream-pearls-rack">
+                    <span class="pearl"></span><span class="pearl"></span><span class="pearl"></span>
+                    <span class="pearl"></span><span class="pearl"></span><span class="pearl"></span>
+                    <span class="pearl"></span><span class="pearl"></span><span class="pearl"></span>
+                  </div>
+                </div>
+
+                <!-- Top Tier -->
+                <div class="cake-tier cake-tier-top">
+                  <!-- Melting Cream Drips on Top Tier -->
+                  <div class="scallop-frosting-strip top-drips">
+                    <span class="drip drip-t1"></span>
+                    <span class="drip drip-t2"></span>
+                    <span class="drip drip-t3"></span>
+                    <span class="drip drip-t4"></span>
+                  </div>
+                  <!-- Sprinkles on Top Tier -->
+                  <div class="cake-sprinkles top-sprinkles">
+                    <span class="sprinkle sp-t1"></span>
+                    <span class="sprinkle sp-t2"></span>
+                    <span class="sprinkle sp-t3"></span>
+                  </div>
+                  <!-- Cute Malkin Badge on Tier -->
+                  <div class="tier-heart-tag">💖</div>
+                  <!-- Whipped Cream Rosettes -->
+                  <div class="frosting-rosette rosette-1">🌸</div>
+                  <div class="frosting-rosette rosette-2">✨</div>
+                  <div class="frosting-rosette rosette-3">🌸</div>
+                </div>
+
+                <!-- Candles Rack -->
+                <div class="candles-rack">
+                  <div class="candle candle-1" data-index="1" title="Tap to blow candle 1">
+                    <div class="flame-aura"></div>
+                    <div class="flame" id="flame-1"></div>
+                    <div class="wick"></div>
+                    <div class="stick stick-striped-pink"></div>
+                    <div class="candle-base">💖</div>
+                  </div>
+                  <div class="candle candle-2" data-index="2" title="Tap to blow candle 2">
+                    <div class="flame-aura"></div>
+                    <div class="flame" id="flame-2"></div>
+                    <div class="wick"></div>
+                    <div class="stick stick-gold"></div>
+                    <div class="candle-base">⭐</div>
+                  </div>
+                  <div class="candle candle-3" data-index="3" title="Tap to blow candle 3">
+                    <div class="flame-aura"></div>
+                    <div class="flame" id="flame-3"></div>
+                    <div class="wick"></div>
+                    <div class="stick stick-striped-lavender"></div>
+                    <div class="candle-base">💖</div>
+                  </div>
+                </div>
+
+                <!-- Cake Slice Indicator -->
+                <div class="cake-slice-cut hidden" id="cake-slice-cut">
+                  <div class="slice-piece">🍰</div>
+                  <div class="slice-sparkle">✨</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cake Controls & Feedback -->
+          <div class="cake-interactions">
+            <div class="wish-status-box" id="wish-status-box">
+              <span class="status-icon">🕯️</span>
+              <span class="status-text" id="cake-instruction-text">The candles are burning bright! Make a wish in your
+                heart.</span>
+            </div>
+
+            <div class="cake-btn-group">
+              <button id="blow-candles-btn" class="btn btn-magic">
+                <span>💨</span> Blow Out The Candles!
+              </button>
+              <button id="cut-cake-btn" class="btn btn-outline" disabled>
+                <span>🔪</span> Cut A Delicious Slice!
+              </button>
+              <button id="relight-btn" class="btn btn-ghost">
+                <span>🔄</span> Relight Candles
+              </button>
+            </div>
+
+            <!-- Celebration Reveal Box (Appears after blowing) -->
+            <div class="celebration-box hidden" id="celebration-box">
+              <div class="celebration-gifs-duo">
+                <div class="cheer-gif-card">
+                  <img src="assets/gif/Happy Cheering GIF by bluesbear.gif" alt="Happy Cheering"
+                    class="celebration-gif">
+                  <p>Yayyy! May all your wishes come true! 🎉</p>
+                </div>
+                <div class="cheer-gif-card">
+                  <img src="assets/gif/Happy Hour Fun GIF by DreamWorks Animation.gif" alt="Happy Hour Fun"
+                    class="celebration-gif">
+                  <p>Party Time! 🥳 Dance like nobody's watching!</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fireworks Pop-Up Celebration Banner (User requested: pop text like fireworks happy birthday sunshine wish you happy happy birthday) -->
+            <div id="fireworks-popup-banner" class="fireworks-popup-banner hidden">
+              <canvas id="fireworks-canvas" class="fireworks-canvas"></canvas>
+              <div class="fireworks-content">
+                <div class="fireworks-burst-tag">🎆 SPECIAL 19TH BIRTHDAY FIREWORKS 🎆</div>
+                <h2 class="fireworks-sunshine-text">HAPPY BIRTHDAY SUNSHINE! 🌟</h2>
+                <p class="fireworks-sub-text">Wish you happy happy birthday Cute Malkin! 💖👑🎂</p>
+                <div class="fireworks-emojis">✨ 🍰 🌸 💖 👑 🎈 🌟 🎆</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step Footer Navigation -->
+        <div class="step-footer-actions">
+          <button class="btn btn-ghost prev-step-trigger" data-prev="1">← Previous: Welcome</button>
+          <button class="btn btn-primary pulse-btn next-step-trigger" data-next="3" id="cake-next-step-btn">
+            Next: Reasons You Are Special
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- STEP 3: HEARTFELT BIRTHDAY LETTER -->
+    <div class="journey-step" id="step-3" data-title="Heartfelt Birthday Letter 📜" data-badge="Step 3 of 7">
+      <section class="letter-section" id="letter-section">
+        <div class="section-header">
+          <span class="section-tag">📜 From the Heart</span>
+          <h2 class="section-title">A Special Letter Just for You</h2>
+          <p class="section-desc">Words can rarely express how much you mean, but here is a little piece of my heart.
+          </p>
+        </div>
+
+        <div class="envelope-container" id="letter-envelope">
+          <!-- Parchment Document -->
+          <article class="parchment-letter" id="parchment-letter">
+            <div class="parchment-header">
+              <span class="wax-seal-icon">⚜️</span>
+              <div class="letter-date">October 13, 2026</div>
+            </div>
+
+            <div class="letter-content" id="letter-body-text">
+              <h3 class="letter-salutation">Dear Malkin 👑💖✨,</h3>
+
+              <p>
+                wese toh mai ek acha bacha hu 😇, pata nhi apke samne kese chutiya ban jata hu 🙈😂 but acha lagta hai! start mai toh itne wo nhi tha 🥺, but ab jab bhi apke sath game khelu 🎮, series dekhu 🍿, call pe study karu 📚🎧, masti karu 😜, phir galti kud karke phir manau 🥺👉👈... sab payara lagta hai! 🥰💖
+              </p>
+
+              <p>
+                thank you thank you so much! 🥹✨ birthday apka hai but gift tum mere ho 🎁💝, thank for make me happy! 🌸 wese toh mai apke liye kux kar na pata 😅 but try pura karta but nhi kar pata... but har baar aap mere jo karte ho sab chiz ke liye thank youuuuuuu! 🫂💖✨
+              </p>
+
+              <p>
+                sach mai apse milke boht acha laga 💫, boht chiz jani samji aur abhi bhi boht chiz janni baki hai 💭👀. sooooooo ese hi apna bond bana rahe 🤞♾️ aur acha bhi soch liya kaaro thoda 😌, tareef bhi kar diya karo! 🤭✨ happyyyyy happyyyyy birthday! 🎂🎉🥳 bas haste raho mast raho 😄💃. problems tumpe boht hai jo kabhi khatam na hogi 🤧, isliye bas maje mai chill hi raho jese rahti hai 🕶️🏖️, baki mood swing toh mai kara dunga 😋🤪
+              </p>
+
+              <p class="letter-closing">
+                apka payara bhakt 🙏, student 👨‍🎓, dost 🤝, partner 💖 and aur jo jo ho sab add kar lena hehe 🤭✨💌<br><br>
+                <strong style="font-size: 1.55rem; color: #b45309;">Dev 😋😋💫</strong>
+              </p>
+            </div>
+
+            <div class="letter-tools">
+              <button id="edit-letter-btn" class="btn btn-ghost-sm">
+                <span>✏️</span> Edit Letter Text
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Step Footer Navigation -->
+        <div class="step-footer-actions">
+          <button class="btn btn-ghost prev-step-trigger" data-prev="7">← Previous: Wishing Sky</button>
+          <button class="btn btn-primary pulse-btn next-step-trigger" data-next="1">
+            <span>🔄</span> Replay Birthday Journey from Start!
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- STEP 4: REASONS WHY YOU ARE SO SPECIAL (GIF GALLERY) -->
+    <div class="journey-step" id="step-4" data-title="Why You Are So Special 💌" data-badge="Step 4 of 7">
+      <section class="reasons-section" id="reasons-section">
+        <div class="section-header">
+          <span class="section-tag">💌 Reasons You're Adorable</span>
+          <h2 class="section-title">Every Little Thing That Makes You Special</h2>
+          <p class="section-desc">Tap on any card to reveal secret notes and shower with cute love reactions!</p>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="filter-pills" id="gif-filter-pills">
+          <button class="pill active" data-filter="all">All Sweet Moments (12)</button>
+          <button class="pill" data-filter="love">Warm Hugs & Kisses 💖</button>
+          <button class="pill" data-filter="funny">Goofy & Cute 🐱</button>
+          <button class="pill" data-filter="sweet">Sweet Smiles ✨</button>
+        </div>
+
+        <!-- GIF Memory Cards Grid -->
+        <div class="gif-cards-grid" id="gif-cards-grid">
+
+          <!-- Card 1: Grin Smile -->
+          <article class="gif-card" data-category="sweet">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Grin Smile GIF by iQiyi.gif" alt="Grinning smile" class="card-gif" loading="lazy">
+              <span class="badge-tag">Radiant Glow ✨</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">That Contagious Smile</h3>
+              <p class="card-quote">"Your smile is literally medicine. It lights up any dull room and makes everyone
+                around you instantly happier."</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="24" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">24</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="Whenever you smile with your whole face, you look like pure sunshine. Never lose that bright spirit!">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Love You Hug -->
+          <article class="gif-card" data-category="love">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Love You Hug GIF by Bichi Mao.gif" alt="Love You Hug" class="card-gif"
+                loading="lazy">
+              <span class="badge-tag">Warmest Comfort 🧸</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">The Softest Bear Hugs</h3>
+              <p class="card-quote">"A hug from you feels like a warm cup of cocoa on a cold rainy day. Sending you the
+                tightest, coziest virtual squeeze!"</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="38" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">38</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="Whenever you come to make up with me after I've made a mistake, and gently explain things to me, I love it so much.">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Cat Kitten Drama -->
+          <article class="gif-card" data-category="funny">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Cat Kitten GIF.gif" alt="Cat Kitten Drama" class="card-gif" loading="lazy">
+              <span class="badge-tag">Drama Queen 🐱</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">Cute Little Tantrums</h3>
+              <p class="card-quote">"Even when you're giving cute attitude, making pouty faces, or having dramatic kitty
+                moments, you are 100% precious."</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="45" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">45</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="Whenever I'm trying to tell you something and you act dramatic, don't listen, or get up to your little antics, you look so adorable.">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Happy Fun Friends -->
+          <article class="gif-card" data-category="funny">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Happy Fun GIF by LINE FRIENDS.gif" alt="Happy Fun" class="card-gif" loading="lazy">
+              <span class="badge-tag">Crazy Energy 🥳</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">Unmatched Goofy Vibes</h3>
+              <p class="card-quote">"With you, I can be 1000% my weird self without feeling judged. Thank you for being
+                the partner in all silly crimes!"</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="29" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">29</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="May we always laugh at dumb memes together till our bellies ache and tears roll down!">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Love You Kiss (1) -->
+          <article class="gif-card" data-category="love">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Love You Kiss GIF by Bichi Mao.gif" alt="Love You Kiss" class="card-gif"
+                loading="lazy">
+              <span class="badge-tag">Sweetest Kisses 💋</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">Infinite Sweet Kisses</h3>
+              <p class="card-quote">"Pew pew pew! Flying kisses straight to your cheeks. Wishing you all the pampering
+                and royal treatment today."</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="52" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">52</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="You deserve all the sweet treats, forehead kisses, and compliments in existence today!">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Love You Kiss (2) -->
+          <article class="gif-card" data-category="love">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Love You Kiss GIF by Bichi Mao (1).gif" alt="Love You Kiss Extra" class="card-gif"
+                loading="lazy">
+              <span class="badge-tag">Extra Pampering 🌸</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">Non-Stop Affection</h3>
+              <p class="card-quote">"Just in case you felt under-loved for even 1 second, here is a double reload of
+                affection to keep you smiling!"</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="41" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">41</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="If cuteness was a crime, you would be serving a life sentence without parole.">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7: Happy Love You -->
+          <article class="gif-card" data-category="love">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Happy Love You GIF by LINE FRIENDS.gif" alt="Happy Love You" class="card-gif"
+                loading="lazy">
+              <span class="badge-tag">Soulmate Energy 💫</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">My Absolute Favorite Person</h3>
+              <p class="card-quote">"You are my safe space, my late-night comfort call, and the person who makes life
+                ten times more magical."</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="60" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">60</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="Thank you for being born, and thank you for being in my life. You mean the world to me.">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8: Heart Love Bichi Mao -->
+          <article class="gif-card" data-category="love">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Heart Love GIF by Bichi Mao.gif" alt="Heart Love Bichi Mao" class="card-gif"
+                loading="lazy">
+              <span class="badge-tag">Golden Heart 💛</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">A Heart of Pure Gold</h3>
+              <p class="card-quote">"You care so deeply about the people in your life. Your kindness and warmth make
+                this world a softer place."</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="33" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">33</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="Never lose that tenderness. The universe needs more gentle souls like yours.">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 9: Heart Love SOOBOOKZ -->
+          <article class="gif-card" data-category="sweet">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Heart Love GIF by SOOBOOKZ.gif" alt="Heart Love SOOBOOKZ" class="card-gif"
+                loading="lazy">
+              <span class="badge-tag">Floating Joy 💕</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">Pure Sweet Innocence</h3>
+              <p class="card-quote">"Like a cute little cloud floating in pink skies, you bring so much peace and
+                sweetness wherever you go."</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="27" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">27</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="Wishing you a year filled with sweet surprises, delicious cakes, and dream vacations!">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 10: Hello Kitty Pink -->
+          <article class="gif-card" data-category="sweet">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Hello Kitty Pink GIF.gif" alt="Hello Kitty Pink" class="card-gif" loading="lazy">
+              <span class="badge-tag">Princess Aesthetic 🎀</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">Forever The Hello Kitty Sweetheart</h3>
+              <p class="card-quote">"Pastel bows, delicate elegance, and princess charm. You're living proof that fairy
+                tales exist in real life!"</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="48" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">48</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="Crown on your head, sparkles in your eyes, and a year full of happiness ahead! 👑">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 11: Illustration Love -->
+          <article class="gif-card" data-category="sweet">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Illustration Love GIF by iTalents.gif" alt="Illustration Love" class="card-gif"
+                loading="lazy">
+              <span class="badge-tag">Dreamy Magic 🌙</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">Magical Memories Together</h3>
+              <p class="card-quote">"Every memory with you is like a colorful painting. Thank you for filling my life
+                with such beautiful colors."</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="35" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">35</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="Can't wait to make a hundred more unforgettable memories with you this year!">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 12: Sad Aww (Tease card) -->
+          <article class="gif-card" data-category="funny">
+            <div class="gif-media-wrapper">
+              <img src="assets/gif/Sad Aww GIF by The Comedy Bar.gif" alt="Sad Aww" class="card-gif" loading="lazy">
+              <span class="badge-tag">Miss You Vibe 🥺</span>
+            </div>
+            <div class="gif-card-body">
+              <h3 class="card-title">When We Can't Hang Out</h3>
+              <p class="card-quote">"Literally me when you take 5 minutes to reply or when we have to say goodbye after
+                hanging out. Unacceptable! 🥺"</p>
+              <div class="card-actions">
+                <button class="react-btn" data-reactions="58" title="Send Love">
+                  <span class="heart-icon">💖</span> <span class="react-count">58</span>
+                </button>
+                <button class="read-note-btn"
+                  data-note="Promise me we'll hang out super soon and celebrate your birthday in grand style!">
+                  💌 Secret Note
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Step Footer Navigation -->
+        <div class="step-footer-actions">
+          <button class="btn btn-ghost prev-step-trigger" data-prev="2">← Previous: Cake Ceremony</button>
+          <button class="btn btn-primary pulse-btn next-step-trigger" data-next="4">
+            <span>📸</span> Next: Birthday Gifts 👉
+          </button>
+        </div>
+      </section>
+    </div>
+
+    
+    <!-- STEP 5: THE MEMORY SCRAPBOOK & PHOTO WALL -->
+    <div class="journey-step" id="step-5" data-title="Cute Malkin's Memory Clothesline Wall 🖼️" data-badge="Step 5 of 7">
+      <section class="scrapbook-section" id="scrapbook-section">
+        <div class="section-header">
+          <span class="section-tag">🖼️ The Royal Memory Wall</span>
+          <h2 class="section-title">Cute Malkin's 19th Birthday Memory Clothesline</h2>
+          <p class="section-desc">
+            Strung with twinkling fairy lights and sweet nostalgia! Explore 81 photo & video moments captured for your 19th birthday. Tap a photo to view it in full size or send a love reaction.
+          </p>
+        </div>
+
+        <!-- Scrapbook Interactive Actions & Filter Tabs -->
+        <div class="scrapbook-action-bar">
+          <button id="play-story-reel-btn" class="btn btn-primary pulse-btn btn-lg reel-trigger-btn">
+            <span>🍿</span> Play Cinematic Birthday Story Reel 🎬✨
+          </button>
+          
+          <div class="scrapbook-filter-tabs" id="scrapbook-filter-tabs">
+            <button class="sb-tab active" data-filter="all">🌟 All Memories (<span id="total-memories-count">81</span>)</button>
+            <button class="sb-tab" data-filter="queen">👑 Queen & Princess Poses</button>
+            <button class="sb-tab" data-filter="smiles">🌸 Sweet Smiles & Glow</button>
+            <button class="sb-tab" data-filter="candid">💕 Candid & Cute Moments</button>
+            <button class="sb-tab" data-filter="videos">🎬 Mini Video Reels & Clips</button>
+          </div>
+        </div>
+
+        <!-- Fairy Light String SVG / CSS -->
+        <div class="fairy-light-wire">
+          <span class="bulb bulb-yellow"></span>
+          <span class="bulb bulb-pink"></span>
+          <span class="bulb bulb-blue"></span>
+          <span class="bulb bulb-yellow"></span>
+          <span class="bulb bulb-pink"></span>
+          <span class="bulb bulb-purple"></span>
+          <span class="bulb bulb-yellow"></span>
+          <span class="bulb bulb-pink"></span>
+        </div>
+
+        <!-- Interactive Scrapbook Wall Container -->
+        <div class="scrapbook-wall-grid" id="scrapbook-wall-grid">
+          <!-- Populated dynamically via JS from window.MALKIN_MEMORIES -->
+        </div>
+
+        <div class="scrapbook-footer">
+          <button id="load-more-memories-btn" class="btn btn-secondary-sm hidden">
+            <span>🔄</span> Load More Memories
+          </button>
+          <button id="add-scrapbook-note-btn" class="btn btn-outline-sm">
+            <span>➕</span> Add a Handwritten Memory Note
+          </button>
+        </div>
+
+        <!-- Step Footer Navigation -->
+        <div class="step-footer-actions">
+          <button class="btn btn-ghost prev-step-trigger" data-prev="4">← Previous: Birthday Gifts</button>
+          <button class="btn btn-primary pulse-btn next-step-trigger" data-next="6">
+            <span>🎁</span> Next: Unwrap Mystery Gifts 👉
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- STEP 6: MYSTERY BIRTHDAY GIFTS (VIRTUAL UNBOXING) -->
+    <div class="journey-step" id="step-6" data-title="Unwrap Mystery Birthday Gifts 🎁" data-badge="Step 6 of 7">
+      <section class="gifts-section" id="gifts-section">
+        <div class="section-header">
+          <span class="section-tag">🎁 Virtual Surprise</span>
+          <h2 class="section-title">Unwrap Your Birthday Surprises</h2>
+          <p class="section-desc">Tap on the magical gift boxes to unwrap your special surprise birthday videos! 🎀✨
+          </p>
+        </div>
+
+        <div class="gift-boxes-grid">
+          <div class="mystery-gift-card" data-box="1" id="gift-card-1">
+            <div class="gift-unopened-view">
+              <div class="gift-box-stage">
+                <div class="gift-aura-glow"></div>
+                <div class="gift-sparkles-floating">
+                  <span class="g-sparkle g-sp1">✨</span>
+                  <span class="g-sparkle g-sp2">💖</span>
+                  <span class="g-sparkle g-sp3">🌸</span>
+                  <span class="g-sparkle g-sp4">⭐</span>
+                </div>
+                <div class="gift-3d-box gift-box-red" id="gift-box-1">
+                  <!-- Lid Group with Luxury Silk Bow -->
+                  <div class="gift-box-lid-group">
+                    <div class="gift-ribbon-bow">
+                      <div class="bow-loop bow-loop-left"></div>
+                      <div class="bow-loop bow-loop-right"></div>
+                      <div class="bow-center-knot"></div>
+                      <div class="bow-tail bow-tail-left"></div>
+                      <div class="bow-tail bow-tail-right"></div>
+                    </div>
+                    <div class="gift-box-lid">
+                      <div class="lid-ribbon-vertical"></div>
+                    </div>
+                  </div>
+                  <!-- Box Body with Crossing Ribbons & Shimmer -->
+                  <div class="gift-box-body">
+                    <div class="box-ribbon-vertical"></div>
+                    <div class="box-ribbon-horizontal"></div>
+                    <div class="box-sheen-shine"></div>
+                    <div class="box-tag-label"><span>✨ Special</span></div>
+                  </div>
+                  <!-- Shadow -->
+                  <div class="gift-box-shadow"></div>
+                </div>
+              </div>
+              <h3 class="gift-name">Surprise Video #1</h3>
+              <p class="gift-instruction"><span class="gift-tap-pill"><span>🎁</span> Tap to Unwrap Gift</span></p>
+            </div>
+
+            <div class="gift-revealed-content hidden">
+              <div class="revealed-header">
+                <span class="revealed-badge">✨ Video Unwrapped! 💖</span>
+                <h4 class="revealed-title">Surprise Birthday Video #1</h4>
+              </div>
+              <div class="gift-video-frame">
+                <video class="gift-video" controls playsinline preload="metadata" src="assets/IMAGES/lv_0_20261013023151.mp4"></video>
+              </div>
+              <button class="rewrap-gift-btn" type="button" title="Wrap back the gift box">
+                <span>🎁</span> Wrap Back
+              </button>
+            </div>
+          </div>
+
+          <div class="mystery-gift-card" data-box="2" id="gift-card-2">
+            <div class="gift-unopened-view">
+              <div class="gift-box-stage">
+                <div class="gift-aura-glow"></div>
+                <div class="gift-sparkles-floating">
+                  <span class="g-sparkle g-sp1">✨</span>
+                  <span class="g-sparkle g-sp2">💖</span>
+                  <span class="g-sparkle g-sp3">🌸</span>
+                  <span class="g-sparkle g-sp4">⭐</span>
+                </div>
+                <div class="gift-3d-box gift-box-pink" id="gift-box-2">
+                  <!-- Lid Group with Luxury Silk Bow -->
+                  <div class="gift-box-lid-group">
+                    <div class="gift-ribbon-bow">
+                      <div class="bow-loop bow-loop-left"></div>
+                      <div class="bow-loop bow-loop-right"></div>
+                      <div class="bow-center-knot"></div>
+                      <div class="bow-tail bow-tail-left"></div>
+                      <div class="bow-tail bow-tail-right"></div>
+                    </div>
+                    <div class="gift-box-lid">
+                      <div class="lid-ribbon-vertical"></div>
+                    </div>
+                  </div>
+                  <!-- Box Body with Crossing Ribbons & Shimmer -->
+                  <div class="gift-box-body">
+                    <div class="box-ribbon-vertical"></div>
+                    <div class="box-ribbon-horizontal"></div>
+                    <div class="box-sheen-shine"></div>
+                    <div class="box-tag-label"><span>👑 Malkin</span></div>
+                  </div>
+                  <!-- Shadow -->
+                  <div class="gift-box-shadow"></div>
+                </div>
+              </div>
+              <h3 class="gift-name">Surprise Video #2</h3>
+              <p class="gift-instruction"><span class="gift-tap-pill"><span>🎁</span> Tap to Unwrap Gift</span></p>
+            </div>
+
+            <div class="gift-revealed-content hidden">
+              <div class="revealed-header">
+                <span class="revealed-badge">✨ Video Unwrapped! 💖</span>
+                <h4 class="revealed-title">Surprise Birthday Video #2</h4>
+              </div>
+              <div class="gift-video-frame">
+                <video class="gift-video" controls playsinline preload="metadata" src="assets/IMAGES/lv_7533933644189076789_20261013024609.mp4"></video>
+              </div>
+              <button class="rewrap-gift-btn" type="button" title="Wrap back the gift box">
+                <span>🎁</span> Wrap Back
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step Footer Navigation -->
+        <div class="step-footer-actions">
+          <button class="btn btn-ghost prev-step-trigger" data-prev="3">← Previous: Reasons You Are Special</button>
+          <button class="btn btn-primary pulse-btn next-step-trigger" data-next="5">
+            <span>🌟</span> Next: Open the Memory Scrapbook 👉
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- STEP 7: THE WISHING SKY & GRAND FINALE (INTERACTIVE LANTERNS) -->
+    <div class="journey-step" id="step-7" data-title="Midnight Wishing Sky & Grand Finale 🌟" data-badge="Step 7 of 7">
+      <section class="wishing-sky-section" id="wishing-sky-section">
+        <div class="wishing-sky-canvas-wrapper">
+          <canvas id="sky-canvas"></canvas>
+        </div>
+
+        <div class="wishing-controls-overlay">
+          <div class="section-header text-white">
+            <span class="section-tag tag-white">🌟 Midnight Wishing Well</span>
+            <h2 class="section-title text-white">Send a Birthday Wish to the Stars</h2>
+            <p class="section-desc text-white-muted">
+              Whisper your sweetest prayer or blessing for her. Release a glowing paper lantern into the midnight sky!
+            </p>
+          </div>
+
+          <div class="wishing-input-box">
+            <input type="text" id="wish-message-input"
+              placeholder="write a wish" maxlength="100">
+            <button id="release-lantern-btn" class="btn btn-lantern">
+              <span>🏮</span> Release Lantern into the Sky!
+            </button>
+          </div>
+
+          <div class="active-wishes-counter">
+            <span>✨ <strong id="lantern-count">8</strong> glowing lanterns floating for the Birthday Girl</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step Footer Navigation (Positioned below the wishing sky stage) -->
+      <div class="step-footer-actions wishing-footer-nav">
+        <button class="btn btn-ghost prev-step-trigger" data-prev="5">← Previous: Memory Scrapbook</button>
+      </div>
+
+      <!-- Cinematic Paper-to-Lantern Ascension Overlay -->
+      <div id="cinematic-lantern-stage" class="cinematic-lantern-stage hidden" aria-hidden="true">
+        <div class="cinematic-backdrop"></div>
+        <div class="cinematic-elements-container">
+          <!-- The Glowing Parchment Paper with Friend's Wish -->
+          <div class="cinematic-paper-wrapper" id="cinematic-paper">
+            <div class="cinematic-parchment">
+              <span class="parchment-sparkle-star">✨</span>
+              <div class="parchment-title">A Birthday Wish From Your Friend</div>
+              <p class="parchment-wish-text" id="cinematic-wish-text">write a wish</p>
+              <div class="parchment-sign">Folded with pure love & sent to the stars 💖</div>
+            </div>
+          </div>
+
+          <!-- The Floating Sky Lantern that forms around the folded paper -->
+          <div class="cinematic-sky-lantern hidden" id="cinematic-lantern">
+            <div class="lantern-halo-glow"></div>
+            <div class="lantern-flame-core"></div>
+            <div class="lantern-canopy">
+              <div class="lantern-inscribed-wish" id="lantern-inscribed-wish">✨</div>
+              <div class="lantern-ribs"></div>
+            </div>
+            <div class="lantern-base-ring"></div>
+            <div class="lantern-tassel"></div>
+            <div class="lantern-sparkle-tail"></div>
+          </div>
+
+          <!-- Celestial Status Banner during Ascension -->
+          <div class="cinematic-status-banner hidden" id="cinematic-status">
+            <span>🏮 Your wish has taken flight into the starry heavens... 💫</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-heart">💖 Made with all the love in the universe for the Birthday Girl 💖</div>
+      <p class="footer-note">Celebrate every second. You deserve all the magic the universe has to offer!</p>
+      <div class="footer-gifs">
+        <img src="assets/gif/Heart Love GIF by Bichi Mao.gif" alt="Bichi Mao Heart" class="footer-gif">
+        <img src="assets/gif/Hello Kitty Pink GIF.gif" alt="Hello Kitty" class="footer-gif">
+        <img src="assets/gif/Love You Kiss GIF by Bichi Mao.gif" alt="Kiss GIF" class="footer-gif">
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: GATEKEEPER / ENTRANCE TEST -->
+  <div class="modal-backdrop" id="gatekeeper-modal">
+    <div class="modal-card entrance-card">
+      <div class="envelope-wax-top">
+        <span class="gate-ribbon">🎀 PRIVATE BIRTHDAY SURPRISE 🎀</span>
+      </div>
+
+      <div class="entrance-media">
+        <img src="assets/gif/Illustration Love GIF by iTalents.gif" alt="Entrance Love" class="entrance-gif"
+          id="gate-gif">
+      </div>
+
+      <h2 class="entrance-title">Wait a second! Who is this? 👀</h2>
+      <p class="entrance-desc" id="gate-question-text">
+        This magical palace is strictly reserved for the sweetest, most adorable birthday girl on earth! Are you her?
+      </p>
+
+      <div class="entrance-buttons" id="gate-btn-group">
+        <button id="gate-yes-btn" class="btn btn-primary pulse-btn" type="button">
+          <span>💖</span> Yes, 1000% Me! Let Me In! ✨
+        </button>
+        <button id="gate-no-btn" class="btn btn-outline" type="button">
+          <span>😜</span> Nope, wrong person!
+        </button>
+      </div>
+
+      <!-- If they clicked "No" -->
+      <div class="gate-rejection hidden" id="gate-rejection">
+        <img src="assets/gif/Sad Aww GIF by The Comedy Bar.gif" alt="Sad Aww" class="sad-gif">
+        <p class="sad-text">Heyyy! How dare you! Only my favorite cutie is allowed into this secret celebration! 🥺 Go
+          call her right now!</p>
+        <button id="gate-retry-btn" class="btn btn-primary" type="button">
+          <span>🥺</span> Okay okay, I am the Cutie! Let me in!
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: PERSONALIZE NAME MODAL -->
+  <div class="modal-backdrop hidden" id="name-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>🎀 Personalize Birthday Girl's Name</h3>
+        <button class="modal-close-btn" id="close-name-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Type her real name or sweet nickname below, and the entire website will update instantly for her!</p>
+        <div class="form-group">
+          <label for="custom-girl-name-input">Her Name / Nickname:</label>
+          <input type="text" id="custom-girl-name-input" placeholder="e.g. Cutie, Priya, Ananya, Sweety" value="Cutie"
+            maxlength="30">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="save-name-btn" class="btn btn-primary">Save & Personalize ✨</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: SECRET NOTE VIEWER -->
+  <div class="modal-backdrop hidden" id="note-modal">
+    <div class="modal-card note-card">
+      <div class="modal-header">
+        <h3>💌 Secret Birthday Note</h3>
+        <button class="modal-close-btn" id="close-note-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body note-body">
+        <div class="note-paper">
+          <p id="note-modal-text"></p>
+        </div>
+          <p class="note-song-label" id="note-song-label">A song for this note will play here.</p>
+      </div>
+      <div class="modal-footer">
+        <button id="close-note-btn" class="btn btn-secondary">Close with a Smile 😊</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: EDIT LETTER MODAL -->
+  <div class="modal-backdrop hidden" id="letter-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>✏️ Edit Heartfelt Letter</h3>
+        <button class="modal-close-btn" id="close-letter-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Customize the letter with your personal words, inside jokes, and memories:</p>
+        <textarea id="edit-letter-textarea" rows="8" class="custom-textarea"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button id="save-letter-btn" class="btn btn-primary">Save Letter 📜</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 5: ADD SCRAPBOOK NOTE -->
+  <div class="modal-backdrop hidden" id="scrapbook-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>📌 Pin A New Memory Note</h3>
+        <button class="modal-close-btn" id="close-scrapbook-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="new-memory-caption">Memory Title / Note:</label>
+          <input type="text" id="new-memory-caption" placeholder="e.g. That hilarious late night phone call"
+            maxlength="60">
+        </div>
+        <div class="form-group">
+          <label for="new-memory-file">Choose a Photo (optional):</label>
+          <input type="file" id="new-memory-file" accept="image/*">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="save-scrapbook-memory-btn" class="btn btn-primary">Pin to Wall 📌</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: HAPPIEST BIRTHDAY MALKIN POPUP -->
+  <div class="modal-backdrop hidden" id="malkin-bday-modal">
+    <div class="modal-card malkin-modal-card">
+      <div class="malkin-popup-decor">
+        <span class="decor-sparkle decor-left">✨</span>
+        <span class="decor-crown">👑</span>
+        <span class="decor-sparkle decor-right">💖</span>
+      </div>
+      <div class="modal-header malkin-modal-header">
+        <h3 class="malkin-popup-title">Happiest Birthday Malkin! 💖👑</h3>
+        <button class="modal-close-btn" id="close-malkin-modal-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body malkin-modal-body">
+        <div class="malkin-popup-gif-wrap">
+          <img src="assets/gif/Happy Cheering GIF by bluesbear.gif" alt="Happy Birthday Malkin Celebration"
+            class="malkin-popup-gif">
+        </div>
+        <div class="malkin-message-card">
+          <p class="malkin-blessing-text">
+            May your life always be filled with boundless happiness, radiant smiles, and endless love!
+            May all your dreams and secret wishes turn into beautiful realities, and may today be the most special,
+            wonderful, and joyful day of your life! Keep shining like the queen you are! ✨🎂🌸
+          </p>
+        </div>
+        <div class="malkin-tags-row">
+          <span class="malkin-tag">👑 Queen Of Hearts</span>
+          <span class="malkin-tag">💖 Pure Sunshine</span>
+          <span class="malkin-tag">🎉 Forever Celebrated</span>
+        </div>
+      </div>
+      <div class="modal-footer malkin-modal-footer">
+        <button id="malkin-proceed-btn" class="btn btn-primary pulse-btn btn-lg">
+          <span>🍰</span> Now Let's Cut The Cake! 👉
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: CINEMATIC BIRTHDAY PHOTO STORY REEL THEATER -->
+  <div class="modal-backdrop hidden" id="story-reel-modal">
+    <div class="story-reel-container cinematic-theater-container">
+      <!-- Top Cinema Header -->
+      <div class="story-header-info cinema-header-bar">
+        <button class="story-back-btn" id="story-back-btn" aria-label="Go back to memories" title="Back (Wapas)">
+          <span>⬅️</span> <span>Back</span>
+        </button>
+        <div class="story-user-meta cinema-meta">
+          <span class="story-name">👑 Cute Malkin</span>
+          <span class="story-sub" id="cinema-reel-title">Official 19th Birthday Cinematic Reel 🎬✨</span>
+        </div>
+        <button class="story-close-btn" id="close-story-reel-btn" aria-label="Close story reel" title="Close">✕</button>
+      </div>
+
+      <!-- Top Story Progress Bar -->
+      <div class="cinema-story-progress-container">
+        <div class="cinema-story-progress-fill" id="cinema-progress-fill"></div>
+      </div>
+
+      <!-- Cinema Media Stage Viewport -->
+      <div class="cinema-video-viewport cinematic-photo-stage" id="cinema-photo-stage">
+        <!-- Ambient blurred glow backdrop -->
+        <div class="cinema-ambient-glow" id="cinema-ambient-glow"></div>
+
+        <!-- Film overlay with vignette & sparkles -->
+        <div class="cinema-film-vignette"></div>
+
+        <!-- Dynamic Slide Photos with Ken Burns Transitions -->
+        <div class="cinema-slide-frame" id="cinema-slide-frame">
+          <img id="cinema-active-img" class="cinema-kenburns-img" src="" alt="Cute Malkin Memory">
+        </div>
+
+        <!-- Tap areas for left / right navigation -->
+        <div class="cinema-tap-zone cinema-tap-left" id="cinema-tap-prev" title="Previous Photo"></div>
+        <div class="cinema-tap-zone cinema-tap-right" id="cinema-tap-next" title="Next Photo"></div>
+
+        <!-- Big Play/Pause overlay -->
+        <div id="cinema-video-play-overlay" class="cinema-play-overlay hidden">
+          <div class="cinema-big-play-btn">▶</div>
+        </div>
+
+        <!-- Lower-third Romantic Memory Caption -->
+        <div class="cinema-lower-third" id="cinema-lower-third">
+          <span class="cinema-moment-badge" id="cinema-moment-badge">🌸 Memory #1</span>
+          <h3 class="cinema-moment-title" id="cinema-moment-title">That Contagious Smile ✨</h3>
+          <p class="cinema-moment-quote" id="cinema-moment-quote">Your smile lights up every room!</p>
+          <div class="cinema-moment-counter" id="cinema-moment-counter">1 / 78 Moments</div>
+        </div>
+      </div>
+
+      <!-- Cinema Dedicated Soundtrack Audio Element -->
+      <audio id="cinema-soundtrack-player" preload="auto"></audio>
+
+      <!-- Cinema Bottom Navigation Controls -->
+      <div class="cinema-bottom-controls">
+        <button id="cinema-prev-clip-btn" class="cinema-ctrl-btn" title="Previous Photo">⏮️ Prev</button>
+        <button id="cinema-pause-play-btn" class="cinema-ctrl-btn cinema-main-ctrl" title="Pause / Play Slideshow">⏸️ Pause</button>
+        <button id="cinema-next-clip-btn" class="cinema-ctrl-btn" title="Next Photo">Next ⏭️</button>
+        <div class="cinema-music-tag" id="cinema-music-tag">
+          <span>🎵</span> <span id="cinema-song-name">Unki Tareef Mein Kahein Kya</span>
+        </div>
+        <button id="cinema-music-toggle-btn" class="cinema-ctrl-btn" title="Toggle Music">🔊 Music</button>
+        <button id="cinema-bottom-back-btn" class="cinema-ctrl-btn cinema-back-ctrl" title="Back to memories">⬅️ Back</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- MODAL: FULLSCREEN PHOTO / VIDEO LIGHTBOX -->
+    <div class="modal-backdrop hidden" id="photo-lightbox-modal">
+      <div class="lightbox-card">
+        <!-- Top Navigation & Control Bar -->
+        <div class="lightbox-top-bar">
+          <button class="lightbox-back-btn" id="lightbox-back-btn" aria-label="Go back to memories" title="Back (Wapas)">
+            <span class="back-icon">⬅️</span> <span class="back-text">Back</span>
+          </button>
+          <div class="lightbox-header-info">
+            <span id="lightbox-media-badge" class="lightbox-badge">📸 Photo</span>
+            <span id="lightbox-counter" class="lightbox-counter">1 / 83</span>
+          </div>
+          <button class="lightbox-close-btn" id="close-lightbox-btn" aria-label="Close lightbox" title="Close">✕</button>
+        </div>
+
+        <!-- Media Display Area -->
+        <div class="lightbox-media-wrapper" id="lightbox-media-container"></div>
+
+        <!-- Video Quick Controls Bar (visible when playing video) -->
+        <div class="lightbox-video-controls-bar hidden" id="lightbox-video-controls-bar">
+          <button id="lightbox-video-playpause-btn" class="video-pill-btn" title="Pause / Play Video">
+            <span id="lightbox-playpause-icon">⏸️</span> <span id="lightbox-playpause-text">Pause</span>
+          </button>
+          <button id="lightbox-video-mute-btn" class="video-pill-btn" title="Sound Mute/Unmute">
+            <span id="lightbox-mute-icon">🔊</span> <span id="lightbox-mute-text">Sound</span>
+          </button>
+          <button id="lightbox-video-restart-btn" class="video-pill-btn" title="Replay from start">
+            <span>🔄</span> <span>Restart</span>
+          </button>
+        </div>
+
+        <!-- Bottom Meta & Actions Bar -->
+        <div class="lightbox-meta">
+          <div class="lightbox-title-area">
+            <h3 id="lightbox-title">Cute Malkin's Memory</h3>
+            <p id="lightbox-date">Official 19th Birthday 💕</p>
+          </div>
+          <div class="lightbox-actions">
+            <button id="lightbox-like-btn" class="lightbox-action-btn" title="Send Love">
+              <span id="lightbox-like-icon">💖</span> <span id="lightbox-like-count">48</span>
+            </button>
+            <button id="lightbox-footer-back-btn" class="lightbox-action-btn back-action-btn" title="Back to memories">
+              <span>⬅️</span> <span>Back</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigation Next/Prev Buttons -->
+        <button class="lightbox-nav-btn nav-prev" id="lightbox-prev-btn" aria-label="Previous">‹</button>
+        <button class="lightbox-nav-btn nav-next" id="lightbox-next-btn" aria-label="Next">›</button>
+      </div>
+    </div>
+
+    <!-- MODAL: JUKEBOX SONG SELECTOR -->
+    <div class="modal-backdrop hidden" id="playlist-modal">
+      <div class="modal-card playlist-modal-card">
+        <div class="modal-header">
+          <h3>🎵 Choose Background Song (10 Tracks)</h3>
+          <button class="modal-close-btn" id="close-playlist-modal-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Select any romantic Hindi & acoustic melody to play while browsing her memories:</p>
+          <div class="playlist-tracks-list" id="playlist-tracks-list"></div>
+        </div>
+        <div class="modal-footer">
+          <button id="close-playlist-btn" class="btn btn-secondary">Close 🎶</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="memories-data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
